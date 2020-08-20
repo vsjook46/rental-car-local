@@ -16,6 +16,8 @@
             <th>Type</th>
             <th>Rent Start</th>
             <th>Rent End</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         <#list list as item>
             <tr>
@@ -24,6 +26,12 @@
                 <td>${item.type}</td>
                 <td>${item.rentStart}</td>
                 <td>${item.rentEnd}</td>
+                <td><a href="https://rental-car-local.herokuapp.com/web/car/update/${item.id}">
+                        <input type="button" value="update" class="btn-primary"></a>
+                </td>
+                <td><a href="https://rental-car-local.herokuapp.com/web/car/delete/${item.id}">
+                        <input type="button" value="delete" class="btn-danger">
+                    </a>
             </tr>
         </#list>
     </table>
